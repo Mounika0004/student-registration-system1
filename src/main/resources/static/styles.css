@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d0a0a 50%, #4a0a0a 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border: 2px solid rgba(220, 20, 60, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #dc143c;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    color: #dc143c;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-section {
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.15) 0%, rgba(139, 0, 0, 0.15) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 2px solid rgba(220, 20, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dc143c;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s;
+    background: rgba(30, 30, 30, 0.9);
+    color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff4444;
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.3);
+    background: rgba(40, 40, 40, 0.95);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#submitBtn {
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+    color: white;
+    flex: 1;
+}
+
+#submitBtn:hover {
+    background: linear-gradient(135deg, #ff4444 0%, #a00000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(220, 20, 60, 0.5);
+}
+
+#cancelBtn {
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+    color: white;
+}
+
+#cancelBtn:hover {
+    background: linear-gradient(135deg, #444444 0%, #2a2a2a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.list-section {
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.15) 0%, rgba(139, 0, 0, 0.15) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(220, 20, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.2);
+}
+
+#studentsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.student-card {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.7) 100%);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    border: 2px solid rgba(220, 20, 60, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(220, 20, 60, 0.4);
+    border-color: rgba(220, 20, 60, 0.5);
+}
+
+.student-card h3 {
+    color: #dc143c;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.student-card p {
+    color: #cccccc;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.student-card .student-id {
+    color: #888888;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.student-card .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.student-card .actions button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    flex: 1;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #dc143c 0%, #8b0000 100%);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #ff4444 0%, #a00000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 20, 60, 0.5);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #444444 0%, #2a2a2a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.no-students {
+    text-align: center;
+    color: #888888;
+    padding: 40px;
+    font-size: 1.1em;
+}
+
+.loading {
+    text-align: center;
+    color: #dc143c;
+    padding: 40px;
+    font-size: 1.1em;
+}
+
+.error {
+    background: rgba(220, 20, 60, 0.2);
+    color: #ff6b6b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(220, 20, 60, 0.5);
+}
+
+.success {
+    background: rgba(220, 20, 60, 0.2);
+    color: #ff6b6b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(220, 20, 60, 0.5);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #studentsList {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration System</h1>
+        
+        <!-- Registration Form -->
+        <div class="form-section">
+            <h2 id="formTitle">Register New Student</h2>
+            <form id="studentForm">
+                <input type="hidden" id="studentId">
+                
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Economics">Economics</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" id="submitBtn">Register Student</button>
+                    <button type="button" id="cancelBtn" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Students List -->
+        <div class="list-section">
+            <h2>Registered Students</h2>
+            <div id="studentsList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

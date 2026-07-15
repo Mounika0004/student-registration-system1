@@ -1,0 +1,6 @@
+com\student\registration\controller\StudentController.class
+com\student\registration\StudentRegistrationApplication.class
+com\student\registration\repository\StudentRepository.class
+com\student\registration\service\StudentService.class
+com\student\registration\controller\HomeController.class
+com\student\registration\entity\Student.class
