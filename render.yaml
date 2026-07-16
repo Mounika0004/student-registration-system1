@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: student-registration-system
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/registration-system-1.0.0.jar
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: student-db
+          property: connectionString
+      - key: DATABASE_USERNAME
+        fromDatabase:
+          name: student-db
+          property: user
+      - key: DATABASE_PASSWORD
+        fromDatabase:
+          name: student-db
+          property: password
+
+databases:
+  - name: student-db
+    databaseName: student_registration
+    user: student_user
