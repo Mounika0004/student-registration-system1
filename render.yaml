@@ -1,9 +1,8 @@
 services:
   - type: web
     name: student-registration-system
-    env: java
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/registration-system-1.0.0.jar
+    env: docker
+    plan: free
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -21,4 +20,5 @@ services:
 databases:
   - name: student-db
     databaseName: student_registration
+    plan: free
     user: student_user
