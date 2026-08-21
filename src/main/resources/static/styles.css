@@ -21,13 +21,13 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 750px;
     margin: 0 auto;
     background: rgba(20, 20, 20, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    padding: 40px;
+    padding: 25px;
     border: 2px solid rgba(220, 20, 60, 0.3);
 }
 
@@ -52,15 +52,15 @@ h2 {
 
 .form-section {
     background: linear-gradient(135deg, rgba(220, 20, 60, 0.15) 0%, rgba(139, 0, 0, 0.15) 100%);
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     border: 2px solid rgba(220, 20, 60, 0.3);
     box-shadow: 0 4px 15px rgba(220, 20, 60, 0.2);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .form-group label {
@@ -74,10 +74,10 @@ h2 {
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 12px;
+    padding: 9px;
     border: 2px solid #dc143c;
     border-radius: 8px;
-    font-size: 1em;
+    font-size: 0.9em;
     transition: all 0.3s;
     background: rgba(30, 30, 30, 0.9);
     color: white;
@@ -261,4 +261,167 @@ button {
     #studentsList {
         grid-template-columns: 1fr;
     }
+    /* Registered Employees Page */
+
+.employees-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 35px;
+}
+
+.employees-container h1 {
+    text-align: center;
+    color: #e0002a;
+    margin-bottom: 35px;
+}
+
+.employee-card {
+    background: rgba(30, 10, 15, 0.95);
+    border: 1px solid #e0002a;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(224, 0, 42, 0.25);
+}
+
+.employee-card h2 {
+    color: #e0002a;
+    margin-bottom: 20px;
+}
+
+.employee-card p {
+    color: white;
+    margin: 10px 0;
+}
+
+.employee-card strong {
+    color: #ff1744;
+}
+
+.employee-actions {
+    margin-top: 20px;
+}
+
+.employee-actions button {
+    background: #e0002a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.employee-actions button:hover {
+    background: #ff1744;
+}
+
+.back-button {
+    background: transparent !important;
+    border: 1px solid #e0002a !important;
+}
+/* Registered Employees */
+
+.list-section {
+    margin-top: 30px;
+}
+
+.student-card {
+    background: rgba(30, 10, 15, 0.95);
+    border: 1px solid #e0002a;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(224, 0, 42, 0.25);
+}
+
+.student-id {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.student-card h3 {
+    color: #e0002a;
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
+
+.student-card p {
+    color: white;
+    margin: 12px 0;
+}
+
+.student-card strong {
+    color: #ff1744;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-btn {
+    background: #e0002a;
+}
+
+.delete-btn {
+    background: #8b0000;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+.loading,
+.no-students,
+.error {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* TEST - Registered Employees page */
+.student-card {
+    background: black !important;
+    border: 3px solid red !important;
+    padding: 30px !important;
+    margin: 20px 0 !important;
+    border-radius: 15px !important;
+}
+
+.student-card h3 {
+    color: red !important;
+}
+
+.student-card p {
+    color: white !important;
+}
+
+.student-card strong {
+    color: red !important;
+}
+.student-card {
+    background: black !important;
+    border: 5px solid red !important;
+    padding: 30px !important;
+    margin: 20px !important;
+}
+
+.student-card h3 {
+    color: red !important;
+}
+
+.student-card p {
+    color: white !important;
+}
 }
